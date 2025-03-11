@@ -3,12 +3,12 @@
 This is a **Personal Portfolio & Blog Website** built with **Next.js, TypeScript, Tailwind CSS, and MongoDB**. It includes a portfolio showcase, blog management, and a fully functional dashboard for managing content.
 
 ### ✅ Live Links
-- **Frontend:**  [Live](https://blog-portfolio-black.vercel.app/)  
-- **Backend:**  [Live](https://blog-portfolio-backend.vercel.app/)
+- **Frontend:**  [Live](https://portfolio-client-roan.vercel.app/)  
+- **Backend:**  [Live](https://portfolio-server-six-ruby.vercel.app//)
 
 ---
 ### ✅ Repo Link 
-- **Frontend and Backend:**  [Repo Link](https://github.com/mdrakibmia99/blog-portfolio)  
+- **Frontend and Backend:**  [Repo Link](https://github.com/sajib9988/portfolio)  
 
 ---
 
@@ -76,7 +76,7 @@ This is a **Personal Portfolio & Blog Website** built with **Next.js, TypeScript
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/mdrakibmia99/blog-portfolio.git
+   git clone https://github.com/sajib9988/portfolio.git
    ```
 2. Navigate to the backend directory:
    ```sh
