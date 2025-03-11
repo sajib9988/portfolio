@@ -11,7 +11,7 @@ const ProjectPage = async () => {
   });
   const data = await res.json();
   const projects = data?.data;
-  // console.log(projects, "project");
+  console.log(projects, "project");
   return (
     <div>
       <AllProject projects={projects as TProject[]} />

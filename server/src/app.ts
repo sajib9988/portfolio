@@ -11,7 +11,7 @@ const app: Application = express();
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({ origin: ["http://localhost:3000","https://portfolio-client-qkvktd5kv-sajib-biswas-projects.vercel.app"], credentials: true }));
+app.use(cors({ origin: "https://portfolio-client-roan.vercel.app", credentials: true }));
 
 // application router
 // all route

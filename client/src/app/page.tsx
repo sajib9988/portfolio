@@ -15,6 +15,7 @@ export default async function Home() {
     next: { revalidate: 30 },
   });
   const projectData = await projectTes.json();
+  console.log(projectData, "all projects");
   
   const blogRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/blog`, {
     next: { revalidate: 30 },
