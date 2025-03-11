@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaFacebookF, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF,  FaLinkedinIn } from "react-icons/fa";
  function Footer() {
   return (
     <footer className="bg-gray-50 text-gray-900 py-8 px-4 lg:px-0 dark:bg-gray-900 dark:text-gray-300">

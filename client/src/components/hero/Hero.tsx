@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaFacebookF, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import img from "@/assets/images/with-out-bg.jpeg";
 import { motion } from "motion/react";
 import { fadeTop, motionStep } from "../About/motion";
