@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import img from "@/assets/images/with-out-bg.jpeg";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { fadeTop, motionStep } from "../About/motion";
 import { Download } from "lucide-react";
 import { Button } from "../ui/button";
+
+const text = "Sajib Biswas";
 
 const Hero = () => {
   return (
@@ -22,9 +24,23 @@ const Hero = () => {
         <div className="text-center md:text-left space-y-4 text-white">
           <p className="text-md text-gray-300">Hi, I&apos;m </p>
           <h1 className="text-4xl font-extrabold sm:text-5xl">
-            <span className="text-cyan-400 font-medium text-[2rem] leading-normal md:text-[76px] md:leading-[87px] font-serif">
-              Sajib Biswas
-            </span>
+            <motion.span
+              className="text-cyan-400 font-medium text-[2rem] leading-normal md:text-[76px] md:leading-[87px] font-serif"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ staggerChildren: 0.15 }}
+            >
+              {text.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1, delay: index * 0.1 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.span>
           </h1>
           <p className="text-lg text-gray-300 md:text-[36px]">
             I build things for the web
@@ -49,13 +65,6 @@ const Hero = () => {
             >
               <FaFacebookF className="w-7 h-7" />
             </a>
-            {/* <a
-              href="https://wa.me/+8801913547448"
-              target="_blank"
-              className="hover:text-cyan-400 duration-300"
-            >
-              <FaWhatsapp className="w-7 h-7" />
-            </a> */}
             <a
               href="https://www.linkedin.com/in/sajibbiswas22?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
@@ -68,7 +77,6 @@ const Hero = () => {
 
         {/* Right Side - Image with Animated Border with Gaps */}
         <div className="relative flex items-center justify-center">
-          {/* Animated Circular Border with Gaps */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
@@ -76,7 +84,6 @@ const Hero = () => {
             rounded-full border-[6px] border-red-400 border-dashed"
           ></motion.div>
 
-          {/* Image inside a fully rounded container */}
           <div className="w-[220px] h-[220px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden border-4 border-blue-900 shadow-lg relative z-10">
             <Image
               width={320}
@@ -91,6 +98,5 @@ const Hero = () => {
     </div>
   );
 };
-
 
 export default Hero;
